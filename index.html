@@ -30,6 +30,9 @@
             		<h1>NuCamp</h1>
             		<h2>a better way to camp</h2>
             	</div>
+            	<div class="col-md-4 col-xl-2 align-self-center">
+            		<a class="btn btn-primary btn-lg" href="#reserveForm">Reserve Campsite</a>
+            	</div>
             </div>
         </div>
     </header>
@@ -77,8 +80,13 @@
                 <h2>Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                	<div class="media-body align-self-center">
+                		<h3>React Lake Campground</h3>
+                		<p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+					</div>
+					<img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake Campground" />
+				</div>
             </div>
         </div>
 
@@ -95,6 +103,42 @@
                 	</div>
                 </div>
             </div>
+        </div>
+        <div class="row row-content">
+        	<div class="col-sm-6 mx-auto">
+        		<div class="card">
+					<h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+					<div class="card-body">
+						<form id="reserveForm">
+							<div class="form-group row">
+								<label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+								<div class="col-sm-6"> <!-- should be no need to specify further -->
+									<select class="form-control" name="numCampers" id="numCampers">
+										<option>Select...</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<label for="datePick" class="col-sm-6 col-form-label">Date</label>
+								<div class="col-6">
+									<input type="date" class="form-control" id="datePick" name="date" placeholder="2022-01-01" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col">
+									<button type="submit" class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</form>
+					</div>
+        		</div>
+        	</div>
         </div>
     </div>
 
@@ -130,6 +174,10 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+	<script>
+		// This had to be put after the "datePick" id was referenced; that's why it wasn't initially working
+		datePick.max = new Date().toISOString().split("T")[0]; // not working, why?
+	</script>
 </body>
 
 </html>
