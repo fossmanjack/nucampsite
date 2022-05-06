@@ -30,7 +30,7 @@
             		<h1>NuCamp</h1>
             		<h2>a better way to camp</h2>
             	</div>
-            	<div class="col-md-4 col-xl-2 align-self-center">
+            	<div class="col-md-4 col-xl-2 align-self-center mt-4">
             		<a class="btn btn-primary btn-lg" href="#reserveForm">Reserve Campsite</a>
             	</div>
             </div>
@@ -176,7 +176,7 @@
 
 	<script>
 		// This had to be put after the "datePick" id was referenced; that's why it wasn't initially working
-		datePick.max = new Date().toISOString().split("T")[0]; // not working, why?
+		datePick.min = new Date().toISOString().split("T")[0]; // not working, why?
 	</script>
 </body>
 
