@@ -140,20 +140,24 @@
                 </div>
 -->
                 <div id="accordion">
-                	<div class="card">
-                		<div role="tab" class="card-header">
-                			<h4>
-                				<a data-toggle="collapse" data-target="#bootstrap">
-                					Bootstrap Outfitters <small>Outdoor Gear Specialists</small>
-                				</a>
-                			</h4>
-                			<div class="collapse show" id="bootstrap" data-parent="#accordion">
-                				<div class="card-body">
-                					<p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+					<a data-toggle="collapse" data-target="#bootstrap">
+                		<div class="card">
+                			<div role="tab" class="card-header">
+                				<h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small>
+	<!-- moving the anchor tag to see if it does what i want
+                					<a data-toggle="collapse" data-target="#bootstrap">
+                						Bootstrap Outfitters <small>Outdoor Gear Specialists</small>
+                					</a>
+	-->
+                				</h4>
+                				<div class="collapse show" id="bootstrap" data-parent="#accordion">
+                					<div class="card-body">
+                						<p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                					</div>
                 				</div>
                 			</div>
                 		</div>
-                	</div>
+					</a> <!-- yep, putting the anchor around the whole card div makes the whole thing into a link -->
                     <div class="card">
                         <div role="tab" class="card-header">
                             <h4>
