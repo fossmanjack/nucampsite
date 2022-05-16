@@ -6,14 +6,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	<!-- build:css css/main.css -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
 	<!-- Additional CSS must be placed after bootstrap.css -->
 	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 	<link rel="stylesheet" href="css/localstyles.css" />
+	<!-- endbuild -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
@@ -297,16 +299,13 @@
 	</div>
 <!-- end reservation dialog -->
 
+	<!-- build:js js/main.js -->
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script>
-		// This had to be put after the "datePick" id was referenced; that's why it wasn't initially working
-		datePick.min = new Date().toISOString().split("T")[0];
-
-	</script>
+	<!-- endbuild -->
 </body>
 
 </html>
