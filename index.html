@@ -31,7 +31,7 @@
             	</div>
 
 <!-- begin reservation button -->
-				<div class="col-md-4 col-xl-2 align-self-center mt-4" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">
+				<div class="col-md-4 col-xl-2 align-self-center mt-4" data-toggle="tooltip" data-placement="bottom" data-html="true" trigger="hover" title="Or call us at <br /><strong>1-206-555-1234</strong>">
 					<a class="btn btn-info btn-lg" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
             	</div>
 <!-- end reservation button -->
@@ -115,6 +115,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+					<div class="btn-group" id="carouselButton">
+						<button class="btn btn-secondary btn-sm" id="carouselPause">
+							<span class="fa fa-pause"></span>
+						</button>
+						<button class="btn btn-info btn-sm" id="carouselPlay">
+							<span class="fa fa-play"></span>
+						</button>
+					</div>
 				</div>
             </div>
         </div>
@@ -304,7 +312,17 @@
 
 		$(function () {
             $('[data-toggle="tooltip"]').tooltip()
-        })
+        //})
+
+		//$(function () {
+			$(".carousel").carousel( { interval: 2000 } );
+			$("#carouselPause").click(function(){
+				$(".carousel").carousel("pause");
+			});
+			$("#carouselPlay").click(function(){
+				$(".carousel").carousel("cycle");
+			});
+		});
 	</script>
 </body>
 
