@@ -21,4 +21,13 @@ $(function () {
 	   		$("#carouselButton").addClass("btn-secondary");
 	   	}
 	});
+	$("#reserveButton").click(function(){
+		$("#reserveModal").modal('show');
+	});
+	$("#reserveButton2").click(function(){
+		$("#reserveModal").modal("show");
+	});
+	$("#loginButton").click(function(){
+		$("#loginModal").modal("show");
+	});
 });

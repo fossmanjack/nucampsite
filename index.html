@@ -34,7 +34,7 @@
 
 <!-- begin reservation button -->
 				<div class="col-md-4 col-xl-2 align-self-center mt-4" data-toggle="tooltip" data-placement="bottom" data-html="true" trigger="hover" title="Or call us at <br /><strong>1-206-555-1234</strong>">
-					<a class="btn btn-info btn-lg" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+					<a class="btn btn-info btn-lg" role="button" id="reserveButton2">Reserve Campsite</a>
             	</div>
 <!-- end reservation button -->
 
@@ -47,7 +47,7 @@
 	  <div class="container"> <!-- this will change the padding of the menu elements -->
 		  <!-- we're going to add a button to the navbar -->
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <button class="navbar-toggler" type="button" id="loginButton">
 
 				<span class="navbar-toggler-icon"></span>
 		  	</button>
@@ -168,13 +168,15 @@
                 </div>
             </div>
         </div>
+<!-- second reservation button -->
 		<div class="row row-content align-items-center">
 			<div class="col"></div>
 			<div class="col text-center" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">
-				<a class="btn btn-info btn-lg" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+				<a class="btn btn-info btn-lg" role="button" id="reserveButton">Reserve Campsite</a>
             </div>
 			<div class="col"></div>
 		</div>
+<!-- end reservation button -->
     </div>
 
     <footer class="site-footer">
@@ -249,7 +251,7 @@
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-sticky modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header">
                     <h3 class="modal-title">Reserve a Campsite</h3>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
